@@ -13,8 +13,8 @@ import java.util.List;
 @RequestMapping("/books")
 public class BooksController {
 
-//    @RolesAllowed("user")
-    @PreAuthorize("hasRole('user')")
+//    @PreAuthorize("hasRole('user')")
+    @RolesAllowed("user")
     @GetMapping
     public List<String> findAll() {
         return Arrays.asList("Book 1", "Book 2", "Book 3");
